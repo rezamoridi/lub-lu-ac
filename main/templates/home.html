@@ -1,47 +1,46 @@
-{% extends "base.html" %}
-
-{% block body %}
+{% extends "base.html" %} {% block body %}
 <div class="card-group">
-      <!--Card 1 -->
-      <div class="card">
-        <img
-          class="card-img-top"
-          src="https://cdn.stocksnap.io/img-thumbs/960w/books-old%20books_EVVGI0TT1M.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <p class="card-text"></p>
-          <button type="button" class="btn btn-outline-dark">Library</button>
-        </div>
-        <!--Card 2 -->
-      </div>
-      <div class="card">
-        <img
-          class="card-img-top"
-          src="https://cdn.stocksnap.io/img-thumbs/960w/open-doorway_U2RCJV3HDB.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <p class="card-text"></p>
-          <button type="button" class="btn btn-outline-dark">Associations</button>
-        </div>
-      </div>
-      <!--Card 3 -->
-      <div class="card">
-        <img
-          class="card-img-top"
-          src="https://cdn.stocksnap.io/img-thumbs/960w/building-architecture_CC585EEC5F.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <p class="card-text"></p>
-          <button type="button" class="btn btn-outline-dark">Advanture</button>
-        </div>
-      </div>
+  <!--Card 1 -->
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="https://cdn.stocksnap.io/img-thumbs/960w/books-old%20books_EVVGI0TT1M.jpg"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <p class="card-text"></p>
+      <a href="/library">
+        <button type="button" class="btn btn-outline-dark">Library</button>
+      </a>
     </div>
-{% endblock body %}
-
-{% block title %}
-  Home
-{% endblock title %}
-
+    <!--Card 2 -->
+  </div>
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="https://cdn.stocksnap.io/img-thumbs/960w/open-doorway_U2RCJV3HDB.jpg"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <p class="card-text"></p>
+      <a href="/associations">
+        <button type="button" class="btn btn-outline-dark">Associations</button>
+      </a>
+    </div>
+  </div>
+  <!--Card 3 -->
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="https://cdn.stocksnap.io/img-thumbs/960w/building-architecture_CC585EEC5F.jpg"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <p class="card-text"></p>
+      <a href="/advanture">
+        <button type="button" class="btn btn-outline-dark">Advanture</button>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock body %} {% block title %} Home {% endblock title %}
