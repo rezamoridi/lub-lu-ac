@@ -22,3 +22,8 @@ def associations():
 @views.route('advanture')
 def advanture():
     return render_template("advanture.html")
+
+# project detail view
+@views.route('/project')
+def project_detail():
+    return render_template("project_detail.html")

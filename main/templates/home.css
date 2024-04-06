@@ -1,0 +1,13 @@
+.card {
+    width: 60%; /* Card width as a percentage of its container */
+    max-width: 300px; /* Optional: Set a maximum width for larger screens */
+    height: 50vh; /* Card height as 50% of the viewport height */
+    /* Additional styles for the card */
+  }
+  
+  @media (min-width: 768px) {
+    .card {
+      width: 15%; /* Reduce card width for larger screens */
+      height: auto; /* Allow card height to adjust based on content */
+    }
+  }

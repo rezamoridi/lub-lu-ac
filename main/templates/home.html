@@ -1,46 +1,59 @@
-{% extends "base.html" %} {% block body %}
-<div class="card-group">
-  <!--Card 1 -->
+{% extends "base.html" %}
+{% block body %}
+<style>
+  .card {
+    margin: 1.5%;
+    width: calc(33.33% - 3.5%);
+    height: 300px; /* Adjust the height as needed */
+    border-radius: 20px;
+    overflow: hidden; /* Ensure the image stays within the rounded corners */
+    background-color: transparent;
+    box-shadow: 5px 7px 5px rgb(100, 74, 6);
+  }
+
+  .card img {
+    width: 100%; /* Make the image fill the entire width of the card */
+    height: 100%; /* Make the image fill the entire height of the card */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    display: block; /* Ensure the image behaves as a block element */
+    border-radius: 20px; /* Apply rounded corners to the image */
+  }
+  .card-text {
+    background-color: rgba(46, 109, 236, 0.257);
+    position: absolute; /* Position the text relative to the card */
+    bottom: 0; /* Place the text at the bottom of the card */
+    left: 0; /* Align the text to the left */
+    padding: 10px; /* Add padding to the text */
+    color: white; /* Text color */
+    font-size: 18px; /* Text size */
+    font-weight: bold; /* Text weight */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+</style>
+
+<div class="d-flex">
+  <!--card 1-->
+
   <div class="card">
-    <img
-      class="card-img-top"
-      src="https://cdn.stocksnap.io/img-thumbs/960w/books-old%20books_EVVGI0TT1M.jpg"
-      alt="Card image cap"
-    />
-    <div class="card-body">
-      <p class="card-text"></p>
-      <a href="/library">
-        <button type="button" class="btn btn-outline-dark">Library</button>
-      </a>
-    </div>
-    <!--Card 2 -->
+    <img src="https://cdn.stocksnap.io/img-thumbs/280h/KNCHMWUOR0.jpg" alt="" />
+    <a href="/library"><div class="card-text">Library</div></a>
   </div>
+
+  <!--card 2-->
+
   <div class="card">
-    <img
-      class="card-img-top"
-      src="https://cdn.stocksnap.io/img-thumbs/960w/open-doorway_U2RCJV3HDB.jpg"
-      alt="Card image cap"
-    />
-    <div class="card-body">
-      <p class="card-text"></p>
-      <a href="/associations">
-        <button type="button" class="btn btn-outline-dark">Associations</button>
-      </a>
-    </div>
+    <img src="https://cdn.stocksnap.io/img-thumbs/280h/KNCHMWUOR0.jpg" alt="" />
+    <a href="/associations"><div class="card-text">Association</div></a>
   </div>
-  <!--Card 3 -->
+
+  <!--card 3-->
+
   <div class="card">
-    <img
-      class="card-img-top"
-      src="https://cdn.stocksnap.io/img-thumbs/960w/building-architecture_CC585EEC5F.jpg"
-      alt="Card image cap"
-    />
-    <div class="card-body">
-      <p class="card-text"></p>
-      <a href="/advanture">
-        <button type="button" class="btn btn-outline-dark">Advanture</button>
-      </a>
-    </div>
+    <img src="https://cdn.stocksnap.io/img-thumbs/280h/KNCHMWUOR0.jpg" alt="" />
+    <a href="/advanture"><div class="card-text">Advanture</div></a>
   </div>
 </div>
-{% endblock body %} {% block title %} Home {% endblock title %}
+
+{% endblock body %}
+{% block title %} Home {% endblock title %}

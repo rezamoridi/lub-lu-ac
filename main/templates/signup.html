@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block body %}
+
+<div
+  class="container"
+  style="
+    margin-top: 10%;
+    text-align: center;
+    background-color: #0fafdc52;
+    border-radius: 1%;
+  "
+>
+  <h2>Sign Up</h2>
+  <form action="#" method="post">
+    <label for="username">Username:</label><br />
+    <input type="text" id="username" name="username" required /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br />
+
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" required /><br />
+
+    <label for="confirm_password">Confirm Password:</label><br />
+    <input
+      type="password"
+      id="confirm_password"
+      name="confirm_password"
+      required
+    /><br />
+
+    <label for="phone-number">Phone Number:</label><br />
+    <input type="tel" name="phone_number" id="phone_number" required /><br />
+
+    <input class="btn btn-light" type="submit" value="Sign Up" style="margin-top: 10%;" />
+  </form>
+
+  <div style="text-align: center; margin-top: 10%; margin-top: 10%">
+    <a href="/login">
+      <button class="btn btn-primary" style="margin-bottom: 10%;" type="button">login</button>
+    </a>
+  </div>
+</div>
+{% endblock body %} {% block title %} authentication {% endblock title %}
