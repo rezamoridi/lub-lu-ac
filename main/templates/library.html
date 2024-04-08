@@ -1,73 +1,35 @@
 {% extends "base.html" %} {% block body %}
 <style>
+.col-md-4{
+  filter: drop-shadow(0px 0px 3px crimson);
+}
 
 </style>
-<div class="row">
-    <div class="card" style="height: 18rem; width: 18rem; margin: 10px">
-        <img class="card-img-top"  style="height: 50%;" src="https://cdn.stocksnap.io/img-thumbs/960w/isometric-island_QIHKAT5PBZ.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">book.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="height: 18rem; width: 18rem; margin: 10px">
-        <img class="card-img-top"  style="height: 50%;" src="https://cdn.stocksnap.io/img-thumbs/960w/isometric-island_QIHKAT5PBZ.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">book.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="height: 18rem; width: 18rem; margin: 10px">
-        <img class="card-img-top"  style="height: 50%;" src="https://cdn.stocksnap.io/img-thumbs/960w/isometric-island_QIHKAT5PBZ.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">book.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="height: 18rem; width: 18rem; margin: 10px">
-        <img class="card-img-top"  style="height: 50%;" src="https://cdn.stocksnap.io/img-thumbs/960w/isometric-island_QIHKAT5PBZ.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">book.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+
+<div class="container d-flex" style="border-radius: 10px; background-color: rgba(0, 0, 0, 0.187); margin-top: 3%; margin-bottom: 3%;">
+  <a style="margin: auto;" href="/add-book"><button type="button" class="btn btn-success">Add Book</button></a>
+  <a style="margin: auto;" href="/edit-books"><button type="button" class="btn btn-light">Edit Books</button></a>
 </div>
-<div class="row">
-    <div class="card" style="height: 18rem; width: 18rem; margin: 10px marg">
-        <img class="card-img-top"  style="height: 50%;" src="https://cdn.stocksnap.io/img-thumbs/960w/isometric-island_QIHKAT5PBZ.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">book.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+
+<div class="container">
+  <div class="row">
+    {% for book in books %}
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <a href="{{ book.link }}">
+            <img src="{{ book.image }}" class="card-img-top" alt="Book Image">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{ book.title }}</h5>
+            <p class="card-text">{{ book.author }}</p>
+            <p class="card-text text-muted">Genre: {{ book.genere }}</p>
+            <a href="{{ book.link }}" class="btn btn-primary">Read More</a>
+          </div>
         </div>
       </div>
-      <div class="card" style="height: 18rem; width: 18rem; margin: 10px">
-        <img class="card-img-top"  style="height: 50%;" src="https://cdn.stocksnap.io/img-thumbs/960w/isometric-island_QIHKAT5PBZ.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">book.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="height: 18rem; width: 18rem; margin: 10px">
-        <img class="card-img-top"  style="height: 50%;" src="https://cdn.stocksnap.io/img-thumbs/960w/isometric-island_QIHKAT5PBZ.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">book.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="height: 18rem; width: 18rem; margin: 10px">
-        <img class="card-img-top"  style="height: 50%;" src="https://cdn.stocksnap.io/img-thumbs/960w/isometric-island_QIHKAT5PBZ.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">book.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+    {% endfor %}
+  </div>
 </div>
-{% endblock body %} {% block title %} library {% endblock title %}library
+
+  {% endblock body %} {% block title %} library {% endblock title
+  %}library
