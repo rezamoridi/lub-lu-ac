@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block title %} delete-book {% endblock title %} {%
+block body %}
+
+<style>
+  .card {
+    width: 33%;
+    height: 20%;
+  }
+</style>
+<form action="" method="post">
+  {% for book in books %}
+
+  <div class="card">
+    <img src="{{ book.image }}" class="card-img-top" alt="Book Image" />
+    <div class="card-body">
+      <h5 class="card-title">{{ book.title }}</h5>
+      <p class="card-text">ID: {{ book.id }}</p>
+      <p class="card-text">Author: {{ book.author }}</p>
+      <!-- Add additional information or buttons here if needed -->
+      <button
+        class="delete-button"
+        type="submit"
+        name="delete-btn"
+        id="delete-btn"
+        value="{{book.id}}"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</form>
+
+{% endfor %} {% endblock body %}
